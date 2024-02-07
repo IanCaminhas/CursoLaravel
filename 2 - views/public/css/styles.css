@@ -1,0 +1,21 @@
+.button_default {
+    background-color: blue;
+    color: white;
+}
+
+.button_login {
+    background-color: red;
+    color: white;
+}
+
+.button_width {
+    width: 100%;
+}
+
+.is_admin {
+    background-color: blue;
+}
+
+.is-authenticated {
+    background-color: red;
+}
