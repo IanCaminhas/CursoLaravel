@@ -31,7 +31,7 @@ class PostSeeder extends Seeder
             Se eu não informar nada, vai me dar um texto de 6 palavras.
         */
 
-        for($i=1;$i<=10;$i++) {
+        for($i=1;$i<=100;$i++) {
             DB::table('posts')->insert([
                 //Também posso tentar fazer: 'userId'=> User:all()->random()->id
                 'userId'=> $faker->randomElement($users),

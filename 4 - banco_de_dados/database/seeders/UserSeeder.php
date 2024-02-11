@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
         */
         $faker = Factory::create('pt_BR');
         //Para cadastrar 10 registros, uso um looping for
-        for($i=1;$i<=10;$i++) {
+        for($i=1;$i<=100;$i++) {
             DB::table('users')->insert([
                 'name'=> $faker->name,
                 'email' => $faker->email,
