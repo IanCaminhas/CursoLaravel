@@ -50,17 +50,23 @@ class User extends Authenticatable
     /*
         Como criar um Acesssors ?
         Preciso colocar: get + nome do campo + Attribute
-        Esse nome do banco pode ser igual a do banco ou criar outro.
+        Esse nome do banco pode ser igual a do banco ou criar outro campo qualquer.
         A primeira palavra sempre com letra maiúscula. Se for uma palavra composta,
         as iniciais devem ser maiúsculas.
 
         getNameAttribute. Esse name faz referência ao campo.
-        Quando vier do banco de dados, preciso usar o $value.
-        Não posso fazer $this->name;
+        Não posso fazer return $this->name, ou seja, fazer da seguinte forma:
+         public function getNameAttribute(){
+            return $this->name;
+        } Isso daqui dá erro
 
-        public function getNameAttribute($value){
-            return 'IPC_'.$value;
+        Entretanto, posso fazer:
+        public function getNameAttribute(){
+            return $this->email;
         }
+
+        Por que dá certo com email ?
+        email é diferente de name
     */
 
     public function getNameAttribute($value){

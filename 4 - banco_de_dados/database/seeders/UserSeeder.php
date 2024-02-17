@@ -30,6 +30,7 @@ class UserSeeder extends Seeder
             DB::table('users')->insert([
                 'name'=> $faker->name,
                 'email' => $faker->email,
+                'is_admin' => true,
                 'email_verified_at' => now(),
                 'password' => bcrypt('123'),
                 'remember_token' => Str::random(10)
